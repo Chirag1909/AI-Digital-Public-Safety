@@ -8,7 +8,7 @@ Production-oriented backend and ML foundation for proactive cyber-fraud detectio
 - SQLite persistence with predictions, review queue, logs, and history tables
 - Rule-backed classifier interface with transformer checkpoint compatibility
 - ML preprocessing, training, evaluation, and prediction scripts for `xlm-roberta-base`
-- Unit tests and project documentation
+- Unit tests  and project documentation
 
 ## Project Structure
 - `backend/`: API, services, models, database, tests
