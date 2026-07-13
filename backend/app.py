@@ -10,6 +10,7 @@ BACKEND_ROOT = Path(__file__).resolve().parent
 if str(BACKEND_ROOT) not in sys.path:
     sys.path.insert(0, str(BACKEND_ROOT))
 
+from fastapi.middleware.cors import CORSMiddleware
 from api.chatbot import router as chatbot_router
 from api.classify import router as classify_router
 from api.history import router as history_router
@@ -39,6 +40,15 @@ def create_app() -> FastAPI:
         openapi_url="/openapi.json",
         lifespan=lifespan,
     )
+
+    if settings.cors_enabled:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=settings.allowed_origins,
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
 
     @app.get("/", tags=["health"], summary="Service health check")
     def health() -> dict[str, str]:

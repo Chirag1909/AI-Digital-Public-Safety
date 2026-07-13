@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+*.db
+
+# Node
+node_modules/
+dist/
+.eslintcache
+*.log
+.DS_Store
