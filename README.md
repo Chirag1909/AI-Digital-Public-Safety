@@ -26,6 +26,40 @@ Production-oriented backend and ML foundation for proactive cyber-fraud detectio
    uvicorn backend.app:app --reload --app-dir backend
    ```
 4. Open Swagger UI at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
+<<<<<<< HEAD
+=======
+## Running the Project
+
+### Windows
+
+Backend:
+
+```cmd
+run_backend.bat
+```
+
+Frontend:
+
+```cmd
+run_frontend.bat
+```
+
+### macOS / Linux
+
+Backend:
+
+```bash
+chmod +x run_backend.sh
+./run_backend.sh
+```
+
+Frontend:
+
+```bash
+chmod +x run_frontend.sh
+./run_frontend.sh
+```
+>>>>>>> feature/vishal
 
 ## Running Tests
 ```bash
